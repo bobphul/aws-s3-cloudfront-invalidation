@@ -1,1 +1,3 @@
-# aws-s3-cloudfront-invalidate
+# aws-s3-cloudfront-invalidation
+
+test
