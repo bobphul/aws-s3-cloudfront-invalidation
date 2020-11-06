@@ -1,0 +1,36 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowAccessBucketNotification",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketNotification"
+            ],
+            "Resource": [
+                "arn:aws:s3:::[bucket name]"
+            ]
+        },
+        {
+            "Sid": "AllowCreateInvalidationInCloudfront",
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:ListInvalidations",
+                "cloudfront:CreateInvalidation"
+            ],
+            "Resource": [
+                "arn:aws:cloudfront::[account id]:distribution/[distribution id]"
+            ]
+        },
+        {
+            "Sid": "AllowCreateLogGroupforLambda",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
